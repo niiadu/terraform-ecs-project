@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "niiadu12"
-    key = "jomacsit/tf-deployment/d010624-ecsstuff.tfstate"
+    key = "niiadu/tf-deployment/d010624-ecsstuff.tfstate"
     region = "eu-north-1"
   }
   required_providers {
