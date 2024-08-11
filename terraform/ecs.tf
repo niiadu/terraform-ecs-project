@@ -1,6 +1,6 @@
 module "ecs" {
   source              = "../modules/tf-ecs"
-  name                = "jonas_project"
+  name                = "jonas"
   account_id          = var.account_id
   account_name        = var.account_name
   aws_region          = var.region
