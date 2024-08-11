@@ -8,7 +8,7 @@ module "ecs" {
   vpc_ip_cidr         = data.aws_ssm_parameter.vpc_id.value
   private_subnet_ids  = local.private_subnet_ids
   public_subnets_ids  = local.public_subnet_ids
-  ssl_certificate_arn = data.aws_ssm_parameter.certificate_arn.value
+  ssl_certificate_arn = "arn:aws:acm:eu-north-1:736024348173:certificate/c382160d-b2c3-4863-b779-1f29ee6a9bc6"
   container_name      = "jomacsit"
   image               = "chriscloudaz/netflix:latest" #"213939666921.dkr.ecr.us-west-2.amazonaws.com/jomacsit"
   app_port            = 80
