@@ -7,8 +7,8 @@ module "vpc" {
   private_subnets = flatten([for name, subnet in var.vpc_subnets_map["private"] : keys(subnet) if name == "general"])
   public_subnets  = flatten([for name, subnet in var.vpc_subnets_map["public"] : keys(subnet) if name == "general"])
   tags            = var.tags
-  private_subnet_names = flatten([for name, subnet in var.vpc_subnets_map["private"] : keys(name) if name == "general"])
-  public_subnet_names = flatten([for name, subnet in var.vpc_subnets_map["public"] : keys(name) if name == "general"])
+  private_subnet_names = flatten([for name, subnet in var.vpc_subnets_map["private"] : value(name) if name == "general"])
+  public_subnet_names = flatten([for name, subnet in var.vpc_subnets_map["public"] : value(name) if name == "general"])
 }
 
 #----------------------------------------------------------------
