@@ -158,13 +158,13 @@ variable "create_igw" {
 variable "public_subnet_names" {
   description = "Explicit values to use in the Name tag on public subnets. If empty, Name tags are generated"
   type        = list(string)
-  # default     = ["Pub-sn-1", "Pub-sn-2"]
+  default     = ["Pub-sn-1", "Pub-sn-2"]
 }
 
 variable "private_subnet_names" {
   description = "Explicit values to use in the Name tag on public subnets. If empty, Name tags are generated"
   type        = list(string)
-  # default     = ["Private-SN-1", "Private-SN-2"]
+  default     = ["Private-SN-1", "Private-SN-2"]
 }
 
 variable "single_nat_gateway" {
