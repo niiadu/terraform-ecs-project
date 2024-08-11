@@ -1,13 +1,12 @@
 variable "region" {
   description = "AWS region"
   type        = string
-  default     = "eu-north-1"
+
 }
 
 variable "short_region" {
   description = "Shortened name of the AWS region"
   type        = string
-  default = "eun1"
 }
 
 variable "create_vpc" {
@@ -19,7 +18,6 @@ variable "create_vpc" {
 variable "account_name" {
   description = "Name to be used on all the resources as identifier"
   type        = string
-  default = "niiadu"
 }
 
 variable "cidr" {
@@ -160,13 +158,13 @@ variable "create_igw" {
 variable "public_subnet_names" {
   description = "Explicit values to use in the Name tag on public subnets. If empty, Name tags are generated"
   type        = list(string)
-  default     = ["Pub-sn-1", "Pub-sn-2"]
+  # default     = ["Pub-sn-1", "Pub-sn-2"]
 }
 
 variable "private_subnet_names" {
   description = "Explicit values to use in the Name tag on public subnets. If empty, Name tags are generated"
   type        = list(string)
-  default     = ["Private-SN-1", "Private-SN-2"]
+  # default     = ["Private-SN-1", "Private-SN-2"]
 }
 
 variable "single_nat_gateway" {
